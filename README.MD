@@ -80,13 +80,13 @@ npm run knex -- migrate:make <name>
 
 ## Thinking about the application
 ### Functional requirements
-- [ ] The user can create a new transaction
+- [x] The user can create a new transaction
 - [ ] The user can have a account summary - total
-- [ ] The user can list all the transactions
-- [ ] The user can see a unique transaction
+- [x] The user can list all the transactions
+- [x] The user can see a unique transaction
 
 ### Business Rules
-- [ ] The transaction can be of type credit that will sum to the total, or debit that will subtract.
+- [x] The transaction can be of type credit that will sum to the total, or debit that will subtract.
 - [ ] It should be possible to identify the user between transactions
 - [ ] The user can only visualize transactions that here created
 

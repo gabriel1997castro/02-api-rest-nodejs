@@ -56,3 +56,24 @@ Added ESLint and some configs to the settings of the workspace
 **Fastify** is more **modern, fast, actively maintained, flexible, and up-to-date** than Express, while keeping conceptual compatibility. It’s the best choice both for learning and for projects that need performance and freedom.
 
 ---
+
+## Why using Knex
+We can change the database between the supported ones and the code won't change.
+
+### About migrations
+- Never edit a migration if you send it to someone else from your team
+- If you didn't send to anyone else, you can edit after rollback.
+
+### Useful commands
+Execute last migration
+```bash
+npm run knex -- migrate:latest
+```
+Rollback
+```bash
+npm run knex -- migrate:rollback
+```
+Create new migration
+```bash
+npm run knex -- migrate:make <name>
+```

@@ -1,12 +1,13 @@
 import fastify from 'fastify'
 import { knex } from './database.js'
+import crypto from 'node:crypto'
 
 const app = fastify()
 
 // http://localhost:3000/hello
 app.get('/hello', async () => {
-  const tables = await knex('sqlite_schema').select('*')
-  return tables
+  const transactions = await knex('transactions').select('*')
+  return transactions
 })
 
 app.listen({ port: 3333 }).then(() => {
